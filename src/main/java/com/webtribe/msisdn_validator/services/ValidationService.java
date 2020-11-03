@@ -54,7 +54,7 @@ public class ValidationService {
             System.out.println("Is number valid: " + status);
 
         } catch (NumberParseException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             response.setCode(HttpStatus.BAD_REQUEST.getCode());
             response.setMessage(AppConstants.INVALID_MSISDN + e.getMessage());
         }

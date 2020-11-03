@@ -4,6 +4,7 @@ import com.webtribe.msisdn_validator.utils.PhoneValidationResponse;
 import io.micronaut.http.HttpRequest;
 import io.micronaut.http.client.RxHttpClient;
 import io.micronaut.http.client.annotation.Client;
+import io.micronaut.http.client.exceptions.HttpClientResponseException;
 import org.junit.jupiter.api.BeforeAll;
 
 import javax.inject.Inject;
@@ -69,13 +70,24 @@ public class BaseTest {
 
     /**
      * HTTP call to the validation endpoint.
+     *
      * @param msisdn
      * @return
      */
     public PhoneValidationResponse validationRequest(String msisdn) {
-        PhoneValidationResponse result = client
-                .toBlocking()
-                .retrieve(HttpRequest.GET(URL + msisdn), PhoneValidationResponse.class);
+        PhoneValidationResponse result = new PhoneValidationResponse();
+        try {
+            result = client
+                    .toBlocking()
+                    .retrieve(HttpRequest.GET(URL + msisdn), PhoneValidationResponse.class);
+        } catch (
+                HttpClientResponseException ex) {
+            result.setCode(400);
+            result.setMessage(ex.getMessage());
+
+
+        }
+
         return result;
     }
 

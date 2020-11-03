@@ -26,9 +26,16 @@ public class PhoneServiceController {
 
     @Get
     public HttpResponse<PhoneValidationResponse> validateMsisdn(@QueryValue String msisdn) {
-        var response = validationFacade.validateMsisdn(msisdn);
-        var status = response.getCode();
-        System.out.println(response.toString());
-        return HttpResponse.status(HttpStatus.valueOf(status)).body(response);
+        try {
+            var response = validationFacade.validateMsisdn(msisdn);
+            var status = response.getCode();
+            System.out.println(response.toString());
+            return HttpResponse.status(HttpStatus.valueOf(status)).body(response);
+        } catch (Exception ex){
+            PhoneValidationResponse response = new PhoneValidationResponse();
+            response.setMessage("Error occured processing your request. " + ex.getMessage());
+            return HttpResponse.status(HttpStatus.valueOf(500)).body(response);
+
+        }
     }
 }

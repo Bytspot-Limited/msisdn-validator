@@ -116,7 +116,7 @@ public class SafaricomTests extends BaseTest{
     @Test
     void test_safaricom_invalid_msisdn_254700() {
         var response = this.validationRequest(SAFARICOM_INVALID_254700112233);
-//        Assertions.assertEquals(400, response.getCode());
+        Assertions.assertEquals(400, response.getCode());
         Assertions.assertEquals(AppConstants.INVALID_MSISDN + SAFARICOM_INVALID_254700112233, response.getMessage());
 
 
@@ -125,14 +125,14 @@ public class SafaricomTests extends BaseTest{
     @Test
     void test_safaricom_invalid_msisdn_0700() {
         var response = this.validationRequest(SAFARICOM_INVALID_0700112233);
-        Assertions.assertEquals(response.getCode(), HttpStatus.BAD_REQUEST);
-    }
+        Assertions.assertEquals(400, response.getCode());
+        Assertions.assertEquals(AppConstants.INVALID_MSISDN + SAFARICOM_INVALID_0700112233, response.getMessage());    }
 
     @Test
     void test_safaricom_invalid_msisdn_700() {
         var response = this.validationRequest(SAFARICOM_INVALID_700112233);
-        Assertions.assertEquals(response.getCode(), HttpStatus.BAD_REQUEST);
-    }
+        Assertions.assertEquals(400, response.getCode());
+        Assertions.assertEquals(AppConstants.INVALID_MSISDN + SAFARICOM_INVALID_700112233, response.getMessage());      }
 
 
     /**
@@ -143,20 +143,20 @@ public class SafaricomTests extends BaseTest{
     @Test
     void test_safaricom_invalid_msisdn_254110() {
         var response = this.validationRequest(SAFARICOM_INVALID_254110112233);
-        Assertions.assertEquals(response.getCode(), HttpStatus.BAD_REQUEST.getCode());
-    }
+        Assertions.assertEquals(400, response.getCode());
+        Assertions.assertEquals(AppConstants.INVALID_MSISDN + SAFARICOM_INVALID_254110112233, response.getMessage());        }
 
     @Test
     void test_safaricom_invalid_msisdn_0110() {
         var response = this.validationRequest(SAFARICOM_INVALID_0110112233);
-        Assertions.assertEquals(response.getCode(), HttpStatus.BAD_REQUEST.getCode());
-    }
+        Assertions.assertEquals(400, response.getCode());
+        Assertions.assertEquals(AppConstants.INVALID_MSISDN + SAFARICOM_INVALID_0110112233, response.getMessage());        }
 
     @Test
     void test_safaricom_invalid_msisdn_110() {
         var response = this.validationRequest(SAFARICOM_INVALID_110112233);
-        Assertions.assertEquals(response.getCode(), HttpStatus.BAD_REQUEST);
-    }
+        Assertions.assertEquals(400, response.getCode());
+        Assertions.assertEquals(AppConstants.INVALID_MSISDN + SAFARICOM_INVALID_110112233, response.getMessage());        }
 
     /**
      * ===================================
@@ -166,19 +166,19 @@ public class SafaricomTests extends BaseTest{
     @Test
     void test_safaricom_invalid_msisdn_254111() {
         var response = this.validationRequest(SAFARICOM_INVALID_254111112233);
-        Assertions.assertEquals(response.getCode(), HttpStatus.BAD_REQUEST);
-    }
+        Assertions.assertEquals(400, response.getCode());
+        Assertions.assertEquals(AppConstants.INVALID_MSISDN + SAFARICOM_INVALID_254111112233, response.getMessage());        }
 
     @Test
     void test_safaricom_invalid_msisdn_0111() {
         var response = this.validationRequest(SAFARICOM_INVALID_0111112233);
-        Assertions.assertEquals(response.getCode(), HttpStatus.BAD_REQUEST);
-    }
+        Assertions.assertEquals(400, response.getCode());
+        Assertions.assertEquals(AppConstants.INVALID_MSISDN + SAFARICOM_INVALID_0111112233, response.getMessage());        }
 
     @Test
     void test_safaricom_invalid_msisdn_111() {
         var response = this.validationRequest(SAFARICOM_INVALID_111112233);
-        Assertions.assertEquals(response.getCode(), HttpStatus.BAD_REQUEST);
-    }
+        Assertions.assertEquals(400, response.getCode());
+        Assertions.assertEquals(AppConstants.INVALID_MSISDN + SAFARICOM_INVALID_111112233, response.getMessage());        }
 
 }
