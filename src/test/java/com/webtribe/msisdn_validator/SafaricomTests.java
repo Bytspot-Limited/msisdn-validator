@@ -1,20 +1,9 @@
 package com.webtribe.msisdn_validator;
 
-import com.webtribe.msisdn_validator.services.MsisdnValidationFacade;
 import com.webtribe.msisdn_validator.utils.AppConstants;
-import com.webtribe.msisdn_validator.utils.PhoneValidationResponse;
-import io.micronaut.http.HttpRequest;
-import io.micronaut.http.HttpStatus;
-import io.micronaut.http.client.RxHttpClient;
-import io.micronaut.http.client.annotation.Client;
-import io.micronaut.runtime.EmbeddedApplication;
-import io.micronaut.runtime.Micronaut;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
-
-import javax.inject.Inject;
+import org.junit.jupiter.api.Test;
 
 @MicronautTest
 public class SafaricomTests extends BaseTest{
