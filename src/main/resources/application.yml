@@ -1,0 +1,38 @@
+micronaut:
+  application:
+    name: msisdn-validator
+
+operators:
+  mnos:
+    - name: SAFARICOM
+      code: 1
+      prefixes:
+        - 700-719
+        - 740-749
+        - 757-759
+        - 768-769
+        - 790-799
+        - 110-119
+
+    - name: AIRTEL
+      code: 2
+      prefixes:
+        - 730-739
+        - 750-756
+        - 785-789
+        - 100-102
+        -
+    - name: TELKOM
+      code: 3
+      prefixes:
+        - 770-779
+
+    - name: FAIBA
+      code: 4
+      prefixes:
+        - 747-747
+
+    - name: EQUITEL
+      code: 5
+      prefixes:
+        - 763-766
