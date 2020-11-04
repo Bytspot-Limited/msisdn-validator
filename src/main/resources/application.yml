@@ -7,8 +7,9 @@ operators:
     - name: SAFARICOM
       code: 1
       prefixes:
-        - 700-719
-        - 740-749
+        - 700-729
+        - 740-746
+        - 748-749
         - 757-759
         - 768-769
         - 790-799
@@ -21,7 +22,7 @@ operators:
         - 750-756
         - 785-789
         - 100-102
-        -
+
     - name: TELKOM
       code: 3
       prefixes:

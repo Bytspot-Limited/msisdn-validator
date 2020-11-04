@@ -9,8 +9,6 @@ import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.QueryValue;
 
 import javax.inject.Inject;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Controller housing the validation endpoint.
@@ -33,7 +31,7 @@ public class PhoneServiceController {
             return HttpResponse.status(HttpStatus.valueOf(status)).body(response);
         } catch (Exception ex){
             PhoneValidationResponse response = new PhoneValidationResponse();
-            response.setMessage("Error occured processing your request. " + ex.getMessage());
+            response.setMessage("Error occurred processing your request. " + ex.getMessage());
             return HttpResponse.status(HttpStatus.valueOf(500)).body(response);
 
         }
