@@ -2,7 +2,7 @@
 echo "======================================================================="
 echo ""
 echo "Building project with tests ..."
-./mvnw clean install
+mvn clean install
 echo "Build successful"
 echo "======================================================================="
 echo ""
