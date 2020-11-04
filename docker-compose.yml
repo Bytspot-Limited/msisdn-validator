@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  msisdn-validator:
+    image: jambopay/msisdn-validator:1.0-SNAPSHOT
+    container_name: msisdn-validator-service
+    restart: always
+    ports:
+      - 8080:8080
+    logging:
+      driver: "json-file"
