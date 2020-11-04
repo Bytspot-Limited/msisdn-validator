@@ -7,7 +7,7 @@ echo "Build successful"
 echo "======================================================================="
 echo ""
 echo "Building docker image ..."
-build=$(docker build -t jambopay/msisdn-validator:1.0-SNAPSHOT .)
+build=$(docker build -t elimuraya/jp-msisdn-validator:1.0-SNAPSHOT .)
 echo "Docker image built: $build"
 echo "======================================================================="
 echo ""

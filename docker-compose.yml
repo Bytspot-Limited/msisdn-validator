@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   msisdn-validator:
-    image: jambopay/msisdn-validator:1.0-SNAPSHOT
+    image: elimuraya/jp-msisdn-validator:1.0-SNAPSHOT
     container_name: msisdn-validator-service
     restart: always
     ports:
